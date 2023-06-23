@@ -57,7 +57,7 @@ info: Program[0]
 
 Once the logs show that the seed operation has completed, run the following command to dump tables:
 ```ps
-docker exec -it rpa-mit-referencedata-rpa-mit-reference-data-postgres-1 sh /home/postgres/extract-seed-data.sh
+docker exec rpa-mit-referencedata-rpa-mit-reference-data-postgres-1 sh /home/postgres/extract-seed-data.sh
 ```
 
 This will store the SQL INSERT scripts for each table in the `mit_reference_data` database in `{SOLUTION_DIR}/seed-data-scripts`.
