@@ -5,7 +5,7 @@ using RPA.MIT.ReferenceData.Data.Models.RouteComponents;
 
 namespace RPA.MIT.ReferenceData.Data.Models;
 
-[ExcludeFromCodeCoverage
+[ExcludeFromCodeCoverage]
 public class InvoiceRoute
 {
     [Key]
