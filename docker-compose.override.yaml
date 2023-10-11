@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  rpa-mit-reference-seed-provider:
+    build:
+      target: development
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./RPA.MIT.ReferenceData.SeedProvider:/home/dotnet/RPA.MIT.ReferenceData.SeedProvider
+
+  rpa-mit-reference-data-postgres:
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
