@@ -1,12 +1,12 @@
 version: '3.8'
 
 services:
-  rpa-mit-reference-seed-provider:
+  rpa-mit-reference-data-seedprovider:
     build:
       context: .
       target: development
-    image: rpa-mit-reference-seed-provider
-    container_name: rpa-mit-reference-seed-provider
+    image: rpa-mit-reference-data-seedprovider
+    container_name: rpa-mit-reference-data-seedprovider
     depends_on:
       - rpa-mit-reference-data-postgres
     environment:
