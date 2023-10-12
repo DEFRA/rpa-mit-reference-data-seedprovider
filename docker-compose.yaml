@@ -5,10 +5,6 @@ services:
     build:
       context: .
       target: development
-      args:
-        - PACKAGE_FEED_URL=${PACKAGE_FEED_URL}
-        - PACKAGE_FEED_USERNAME=${PACKAGE_FEED_USERNAME:-PAT}
-        - PACKAGE_FEED_PAT=${PACKAGE_FEED_PAT}
     image: rpa-mit-reference-seed-provider
     container_name: rpa-mit-reference-seed-provider
     depends_on:
