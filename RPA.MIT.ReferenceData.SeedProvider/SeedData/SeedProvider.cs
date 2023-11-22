@@ -20,8 +20,8 @@ public static class SeedProvider
     {
         var sw = Stopwatch.StartNew();
 
-        context.Database.EnsureDeleted();
-        context.Database.EnsureCreated();
+        //context.Database.EnsureDeleted();
+        //context.Database.EnsureCreated();
 
         context.SeedData(context.InvoiceTypes, ReadSeedData<InvoiceType>($"{BaseDir}/RouteComponents/invoice-types.json"));
         context.SeedData(context.Organisations, ReadSeedData<Organisation>($"{BaseDir}/RouteComponents/organisations.json"));

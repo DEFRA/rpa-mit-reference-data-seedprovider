@@ -20,3 +20,15 @@ RUN dotnet publish ./RPA.MIT.ReferenceData.SeedProvider/ -c Release -o /home/dot
 
 WORKDIR /home/dotnet/out
 CMD dotnet ./RPA.MIT.ReferenceData.SeedProvider.dll
+
+# Production
+FROM defradigital/dotnetcore:$PARENT_VERSION AS production
+
+ARG PARENT_VERSION
+ARG PARENT_REGISTRY
+
+LABEL uk.gov.defra.parent-image=defra-dotnetcore-development:${PARENT_VERSION}
+
+COPY --from=development /home/dotnet/out/ ./
+
+CMD dotnet ./RPA.MIT.ReferenceData.SeedProvider.dll
