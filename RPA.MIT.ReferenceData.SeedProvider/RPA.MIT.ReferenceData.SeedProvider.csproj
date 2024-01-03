@@ -15,6 +15,12 @@
     <PackageReference Include="RPA.MIT.ReferenceData" Version="1.0.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
   <PropertyGroup>
     <Version>1.0.6</Version>
     <OutputType>Exe</OutputType>
